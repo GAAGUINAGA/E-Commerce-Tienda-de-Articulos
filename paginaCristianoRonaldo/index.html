@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio informativo sobre Cristiano Ronaldo: biografía, línea de tiempo interactiva, estadísticas de su carrera y galería de imágenes.">
+  <meta name="author" content="Proyecto educativo">
+  <title>Cristiano Ronaldo — Biografía, trayectoria y estadísticas</title>
+  <link rel=en"preconnect" href="https://upload.wikimedia.org">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="cabecera" id="inicio">
+    <div class="contenedor cabecera__interior">
+      <p class="cabecera__marca">CR7 · Perfil deportivo</p>
+      <h1 class="cabecera__titulo">Cristiano Ronaldo dos Santos Aveiro</h1>
+      <p class="cabecera__descripcion">
+        Delantero portugués nacido en Funchal (Madeira) el 5 de febrero de 1985.
+        Considerado uno de los mejores futbolistas de la historia, ha ganado cinco
+        Balones de Oro y es el máximo goleador de la historia del fútbol y de las
+        selecciones nacionales.
+      </p>
+
+    <nav class="navegacion" aria-label="Secciones de la página">
+      <button class="navegacion__boton" id="menuBoton" aria-expanded="false" aria-controls="menuLista">
+        <span class="navegacion__boton-texto">Menú</span>
+      </button>
+      <ul class="navegacion__lista" id="menuLista">
+        <li><a href="#biografia">Biografía</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#fuentes">Fuentes</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main class="contenedor" id="contenido">
+
+    <section class="seccion" id="biografia" aria-labelledby="biografia-titulo">
+      <h2 class="seccion__titulo" id="biografia-titulo">Biografía</h2>
+      <div class="prosa">
+        <p>
+          Cristiano Ronaldo comenzó a jugar en el Andorinha y el Nacional de Madeira
+          antes de incorporarse a las categorías inferiores del Sporting de Lisboa,
+          club con el que debutó como profesional en 2002.
+        </p>
+        <p>
+          En 2003 fichó por el Manchester United, donde ganó tres Premier League y
+          su primera Liga de Campeones (2008). En 2009 se trasladó al Real Madrid por
+          una cifra récord en aquel momento; allí disputó nueve temporadas, se
+          convirtió en el máximo goleador histórico del club y conquistó cuatro
+          Champions League.
+        </p>
+        <p>
+          Posteriormente jugó en la Juventus de Turín (2018–2021), regresó brevemente
+          al Manchester United (2021–2022) y en 2023 se incorporó al Al-Nassr de la
+          liga de Arabia Saudí. Con la selección de Portugal ganó la Eurocopa 2016 y
+          la Liga de Naciones de la UEFA 2019.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion" id="trayectoria" aria-labelledby="trayectoria-titulo">
+      <h2 class="seccion__titulo" id="trayectoria-titulo">Trayectoria — línea de tiempo</h2>
+      <p class="seccion__intro">
+        Selecciona un hito para ver más detalles. Puedes usar el teclado:
+        <kbd>Tab</kbd> para moverte y <kbd>Enter</kbd> o <kbd>Espacio</kbd> para abrir.
+      </p>
+
+      <ol class="linea-tiempo" id="lineaTiempo">
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2002</span>
+            <span class="linea-tiempo__resumen">Debut con el Sporting de Lisboa</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Debuta como profesional con el Sporting con 17 años. Sus actuaciones
+            llaman la atención de varios clubes europeos durante un amistoso ante el
+            Manchester United en 2003.</p>
+          </div>
+        </li>
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2003</span>
+            <span class="linea-tiempo__resumen">Fichaje por el Manchester United</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Llega a Inglaterra y hereda el dorsal número 7. Gana tres Premier
+            League, una FA Cup y la Liga de Campeones 2008, año en el que recibe su
+            primer Balón de Oro.</p>
+          </div>
+        </li>
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2009</span>
+            <span class="linea-tiempo__resumen">Traspaso récord al Real Madrid</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Ficha por el Real Madrid por unos 94 millones de euros. En nueve
+            temporadas marca 450 goles en 438 partidos y gana cuatro Champions
+            League (2014, 2016, 2017 y 2018).</p>
+          </div>
+        </li>
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2016</span>
+            <span class="linea-tiempo__resumen">Campeón de Europa con Portugal</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Portugal gana la Eurocopa 2016 en Francia. Ronaldo se lesiona en la
+            final ante el país anfitrión, pero el equipo se impone 1–0 en la
+            prórroga.</p>
+          </div>
+        </li>
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2018</span>
+            <span class="linea-tiempo__resumen">Etapa en la Juventus</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Se incorpora a la Juventus de Turín, con la que gana dos Serie A y
+            una Supercopa de Italia, y es dos veces máximo goleador de la liga.</p>
+          </div>
+        </li>
+        <li class="linea-tiempo__item">
+          <button type="button" class="linea-tiempo__cabecera" aria-expanded="false">
+            <span class="linea-tiempo__anio">2023</span>
+            <span class="linea-tiempo__resumen">Fichaje por el Al-Nassr</span>
+          </button>
+          <div class="linea-tiempo__detalle" hidden>
+            <p>Firma por el Al-Nassr de Arabia Saudí y se convierte en uno de los
+            máximos goleadores de la Saudi Pro League, además de seguir siendo
+            referente de la selección portuguesa.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="seccion" id="estadisticas" aria-labelledby="estadisticas-titulo">
+      <h2 class="seccion__titulo" id="estadisticas-titulo">Estadísticas de carrera</h2>
+      <p class="seccion__intro">
+        Cifras aproximadas de su carrera en clubes y selección. Elige un club para
+        filtrar la tabla.
+      </p>
+
+      <ul class="tarjetas" aria-label="Resumen de cifras destacadas">
+        <li class="tarjeta">
+          <span class="tarjeta__numero" data-contador="900" data-sufijo="+">0</span>
+          <span class="tarjeta__etiqueta">Goles oficiales (clubes y selección)</span>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__numero" data-contador="5">0</span>
+          <span class="tarjeta__etiqueta">Balones de Oro</span>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__numero" data-contador="5">0</span>
+          <span class="tarjeta__etiqueta">Ligas de Campeones</span>
+        </li>
+        <li class="tarjeta">
+          <span class="tarjeta__numero" data-contador="220" data-sufijo="+">0</span>
+          <span class="tarjeta__etiqueta">Partidos con Portugal</span>
+        </li>
+      </ul>
+
+      <div class="filtro" role="group" aria-label="Filtrar estadísticas por club">
+        <button type="button" class="filtro__boton is-activo" data-club="todos">Todos</button>
+        <button type="button" class="filtro__boton" data-club="sporting">Sporting</button>
+        <button type="button" class="filtro__boton" data-club="manchester">Manchester United</button>
+        <button type="button" class="filtro__boton" data-club="madrid">Real Madrid</button>
+        <button type="button" class="filtro__boton" data-club="juventus">Juventus</button>
+        <button type="button" class="filtro__boton" data-club="alnassr">Al-Nassr</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table class="tabla" id="tablaEstadisticas">
+          <caption class="tabla__caption">Partidos y goles por etapa (datos aproximados)</caption>
+          <thead>
+            <tr>
+              <th scope="col">Etapa</th>
+              <th scope="col">Periodo</th>
+              <th scope="col">Partidos</th>
+              <th scope="col">Goles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-club="sporting">
+              <th scope="row">Sporting de Lisboa</th><td>2002–2003</td><td>31</td><td>5</td>
+            </tr>
+            <tr data-club="manchester">
+              <th scope="row">Manchester United</th><td>2003–2009</td><td>292</td><td>118</td>
+            </tr>
+            <tr data-club="madrid">
+              <th scope="row">Real Madrid</th><td>2009–2018</td><td>438</td><td>450</td>
+            </tr>
+            <tr data-club="juventus">
+              <th scope="row">Juventus</th><td>2018–2021</td><td>134</td><td>101</td>
+            </tr>
+            <tr data-club="manchester">
+              <th scope="row">Manchester United (2.ª etapa)</th><td>2021–2022</td><td>54</td><td>27</td>
+            </tr>
+            <tr data-club="alnassr">
+              <th scope="row">Al-Nassr</th><td>2023–actualidad</td><td>90</td><td>78</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nota">Los totales pueden variar según la fuente y la fecha de consulta.</p>
+    </section>
+
+    <section class="seccion" id="galeria" aria-labelledby="galeria-titulo">
+      <h2 class="seccion__titulo" id="galeria-titulo">Galería</h2>
+      <p class="seccion__intro">Imágenes de Wikimedia Commons. Haz clic para ampliarlas.</p>
+
+      <ul class="galeria">
+        <li class="galeria__item">
+          <button type="button" class="galeria__disparador" data-ampliada="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
+              alt="Cristiano Ronaldo con la camiseta blanca del Real Madrid durante un partido en 2018, corriendo por el campo."
+              loading="lazy" width="800" height="1000">
+          </button>
+          <figcaption class="galeria__pie">Con el Real Madrid (2018)</figcaption>
+        </li>
+        <li class="galeria__item">
+          <button type="button" class="galeria__disparador" data-ampliada="https://upload.wikimedia.org/wikipedia/commons/d/d5/Cristiano_Ronaldo_20120609.jpg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Cristiano_Ronaldo_20120609.jpg"
+              alt="Cristiano Ronaldo con la camiseta de la selección de Portugal en la Eurocopa 2012, preparándose para golpear el balón."
+              loading="lazy" width="800" height="1067">
+          </button>
+          <figcaption class="galeria__pie">Con Portugal en la Eurocopa 2012</figcaption>
+        </li>
+        <li class="galeria__item">
+          <button type="button" class="galeria__disparador" data-ampliada="https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg"
+              alt="Cristiano Ronaldo con la camiseta amarilla del Al-Nassr en un partido de septiembre de 2023 frente al Persépolis."
+              loading="lazy" width="800" height="1130">
+          </button>
+          <figcaption class="galeria__pie">Con el Al-Nassr (2023)</figcaption>
+        </li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="fuentes" aria-labelledby="fuentes-titulo">
+      <h2 class="seccion__titulo" id="fuentes-titulo">Fuentes y enlaces</h2>
+      <ul class="enlaces">
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Cristiano_Ronaldo" rel="noopener noreferrer" target="_blank">
+            Cristiano Ronaldo en Wikipedia (español)
+          </a>
+        </li>
+        <li>
+          <a href="https://commons.wikimedia.org/wiki/Category:Cristiano_Ronaldo" rel="noopener noreferrer" target="_blank">
+            Imágenes en Wikimedia Commons
+          </a>
+        </li>
+        <li>
+          <a href="https://es.wikipedia.org/wiki/Liga_de_Campeones_de_la_UEFA" rel="noopener noreferrer" target="_blank">
+            Liga de Campeones de la UEFA en Wikipedia
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p>Proyecto educativo sobre fútbol. Contenido con fines informativos.</p>
+      <p>Imágenes: Wikimedia Commons (licencias libres). Última revisión: <span id="anioActual">2026</span>.</p>
+      <p><a href="#inicio">Volver arriba</a></p>
+    </div>
+  </footer>
+
+  <!-- Ventana modal para la galería -->
+  <div class="visor" id="visor" hidden>
+    <div class="visor__fondo" data-cerrar></div>
+    <figure class="visor__figura" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button type="button" class="visor__cerrar" data-cerrar aria-label="Cerrar imagen ampliada">&times;</button>
+      <img class="visor__imagen" id="visorImagen" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
