@@ -2,3 +2,6 @@
 /.opencode
 /CLAUDE.md
 /AUDITORIA.md
+
+# Dependencias de tooling de CI (package-lock.json si se versiona)
+/node_modules

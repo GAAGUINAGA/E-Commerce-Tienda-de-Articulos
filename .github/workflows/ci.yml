@@ -1,0 +1,74 @@
+name: CI / CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Linado (HTML / CSS / JS)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:js
+      - run: npm run lint:html
+      - run: npm run lint:css
+      - run: npm run lint:js
+
+  accesibilidad:
+    name: Accesibilidad (pa11y-ci, WCAG2AA)
+    runs-on: ubuntu-latest
+    env:
+      # El runner ubuntu-latest trae Google Chrome preinstalado; se usa ese
+      # binario y se evita la descarga del Chromium propio de puppeteer.
+      PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run a11y
+
+  deploy:
+    name: Publicar en GitHub Pages
+    needs: [lint, accesibilidad]
+    # Solo en push a main y solo si linado y accesibilidad han pasado.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/configure-pages@v6
+      - name: Empaquetar el sitio estatico
+        uses: actions/upload-pages-artifact@v5
+        with:
+          # Solo se publica la carpeta del sitio, no la raiz del repositorio.
+          path: paginaCristianoRonaldo
+      - id: deployment
+        uses: actions/deploy-pages@v5

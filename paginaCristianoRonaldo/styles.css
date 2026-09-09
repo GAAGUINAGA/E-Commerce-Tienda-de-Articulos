@@ -5,7 +5,7 @@
 
 :root {
   --color-fondo: #f4f6fb;
-  --color-superficie: #ffffff;
+  --color-superficie: #fff;
   --color-texto: #1c2230;
   --color-texto-suave: #55607a;
   --color-primario: #0b5cff;
@@ -40,6 +40,7 @@ html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+
   *,
   *::before,
   *::after {
@@ -124,6 +125,7 @@ body {
   display: none;
   align-items: center;
   gap: 0.5rem;
+
   /* Relleno oscuro translúcido: contraste AA del texto blanco sobre el
      degradado del encabezado (antes era blanco translúcido, 4.14:1). */
   background: rgba(0, 0, 0, 0.22);
